@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ExploreTopics from "../components/ExploreTopics.astro";
 
 const basePath = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
@@ -28,36 +29,29 @@ const withBase = (path: string) =>
       <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2 leading-tight">
         Conclusion
       </h1>
-      <p class="text-base text-muted max-w-2xl mx-auto leading-relaxed">
-        Bringing together the genomic, physical, immunological, and social
-        patterns that shape coevolutionary change.
-      </p>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-12">
+  <main class="max-w-3xl mx-auto px-4 py-3">
     <div class="prose-custom space-y-6 text-ink/85 leading-relaxed">
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">Summary of Findings</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-        beatae vitae dicta sunt explicabo.
+        My research aimed to find how human hunting to farming impacted the biological foundations of dogs. While humans were breeding for appearances and luxury since the Victorian era, this research shows human cultural evolution altered dogs' habits and diets for thousands of years.
       </p>
-      <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-        sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
-      </p>
+
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">Answering My Core Questions</h2>
+      <ul class="list-disc ml-6 space-y-2 text-ink/85">
+        <li>
+          <strong>When and Why:</strong> Dogs were domesticated during the Paleolithic era societies agriculture era defining change. They originated from an "ancestry distinct from present-day wolves" (Bergström 1).
+        </li>
+        <li>
+          <strong>Social Relationship:</strong> The bond between human and their best companions was emotional and not based on pure function, the Bonn-Oberkassel burial proves this. Human farming did change the relationships however as dogs were no longer hunting companions.
+        </li>
+        <li>
+          <strong>Biological Impacts on Dogs:</strong> The switch of lifestyles forced a genomic mutation and increase of the AMY2B gene, allowing dogs the ability to digest the starch-rich crops human farms grew.
+        </li>
+      </ul>
     </div>
+    <ExploreTopics current="conclusion" />
     <div class="mt-12 pt-8 border-t border-walnut/10 text-center">
       <a
         href={withBase("/citations")}

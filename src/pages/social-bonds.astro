@@ -1,7 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
-import FigurePanel from "../components/FigurePanel.astro";
+import tripleburial from "../assets/images/triple burial.jpg";
+
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const withBase = (path: string) => `${basePath}${path.replace(/^\/+/, "")}`;
 ---
 
 <BaseLayout title="Social Bonds - ANT 104">
@@ -22,38 +27,75 @@ import FigurePanel from "../components/FigurePanel.astro";
         >Social Bonds</span
       >
       <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2 leading-tight">
-        Social Bonds and Cooperation
+        Pre-Agricultural Social Bonds
       </h1>
-      <p class="text-base text-muted max-w-2xl mx-auto leading-relaxed">
-        Exploring how cooperative behaviors and social structures emerge,
-        evolve, and sustain complex societies across species.
-      </p>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-12">
+  <main class="max-w-3xl mx-auto px-4 py-3">
     <div class="prose-custom space-y-6 text-ink/85 leading-relaxed">
+      <h2 class="text-xl font-bold text-ink mt-8 mb-4">A Best Friend</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Before farming, humans were already beside dogs. Archaeological
+        discoveries prove that the relationship between Paleolithic hunters and
+        gatherers was one of caring.
       </p>
-      <FigurePanel
-        label="Social Bonds Study"
-        caption="Figure 1: Social bonds and cooperation study"
-        variant="social"
-      />
+
+      <h2 class="text-xl font-bold text-ink mt-8 mb-4">
+        14,000-Year-Old Double-Burial
+      </h2>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-        sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        100 years ago, archeologists found a site in Germany called
+        Bonn-Oberkassel where they discovered the fossils of a dog buried next
+        to a man and woman. The dog bones showed it had a disease and was
+        essentially useless for hunting, yet the humans spent time nursing it.
+      </p>
+
+      <h2 class="text-xl font-bold text-ink mt-8 mb-4">Scholarly Evidence:</h2>
+      <blockquote
+        class="border-l-4 border-terracotta pl-4 my-4 italic text-ink/70"
+      >
+        <p class="mb-2">
+          "The Bonn-Oberkassel dog... suffered a morbillivirus (canine
+          distemper) infection... Since canine distemper has a three-week
+          disease course with very high mortality... survival without intensive
+          human assistance would have been unlikely. Before and during this
+          period, the dog cannot have held any utilitarian use to humans. We
+          suggest that... humans... developed emotional and caring bonds for
+          their dogs, as reflected by the survival of this dog..."
+        </p>
+        <p class="text-sm">(Janssens Abstract)</p>
+      </blockquote>
+
+      <div class="my-8 -mx-4 md:-mx-12 lg:-mx-20">
+        <img
+          src={tripleburial.src}
+          alt="Skeletal remains of the Bonn-Oberkassel dog showing female skeleton on the left, male skeleton in the middle, and bones of the dog on the right"
+          class="w-full h-auto rounded-lg shadow-md max-h-[600px] object-contain"
+        />
+        <figcaption class="text-sm text-muted mt-3 text-center px-4 md:px-12 lg:px-20">
+          <strong>Figure 3:</strong> Skeletal remains of the 14,000-year-old Bonn-Oberkassel
+          dog, proving that intensive human care and emotional bonds existed thousands
+          of years before agriculture (Janssens 126–138)
+        </figcaption>
+      </div>
+
+      <h2 class="text-xl font-bold text-ink mt-8 mb-4">
+        My Research Findings:
+      </h2>
+      <p>
+        Even before dogs were eating our crops or being bred for appearances,
+        they were our family. This burial proves that there was a bond deeper
+        than a functional relationship. It showed care in our history with dogs.
       </p>
     </div>
     <ExploreTopics current="social-bonds" />
+    <div class="mt-12 pt-8 border-t border-walnut/10 text-center">
+      <a
+        href={withBase("/citations")}
+        class="inline-flex items-center justify-center rounded-md bg-terracotta px-5 py-3 text-sm font-semibold text-white no-underline shadow-sm transition-colors hover:bg-walnut hover:text-white"
+      >
+        View Citations
+      </a>
+    </div>
   </main>
 </BaseLayout>

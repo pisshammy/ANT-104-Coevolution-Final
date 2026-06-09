@@ -6,8 +6,7 @@ const { title } = Astro.props;
 const basePath = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
-const withBase = (path: string) =>
-  `${basePath}${path.replace(/^\/+/, "")}`;
+const withBase = (path: string) => `${basePath}${path.replace(/^\/+/, "")}`;
 ---
 
 <!doctype html>
@@ -36,7 +35,7 @@ const withBase = (path: string) =>
   </head>
   <body class="bg-paper text-walnut antialiased">
     <nav
-      class="bg-paper/80 backdrop-blur-md border-b border-walnut/10 sticky top-0 z-50"
+      class="bg-paper/80 backdrop-blur-md sticky top-0 z-50"
     >
       <div class="relative z-50 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-14">
@@ -55,12 +54,7 @@ const withBase = (path: string) =>
             <a
               href={withBase("/genomic-diet")}
               class="nav-link text-xs tracking-wide text-muted hover:text-terracotta transition-colors whitespace-nowrap"
-              >Genomic Diet</a
-            >
-            <a
-              href={withBase("/morphology")}
-              class="nav-link text-xs tracking-wide text-muted hover:text-terracotta transition-colors whitespace-nowrap"
-              >Morphology</a
+              >Genetic Diet</a
             >
             <a
               href={withBase("/social-bonds")}
@@ -81,17 +75,10 @@ const withBase = (path: string) =>
         </div>
       </div>
     </nav>
-    <main class="max-w-prose mx-auto px-4 sm:px-6 py-12 leading-relaxed">
+    <main class="max-w-prose mx-auto px-4 sm:px-6 py-8 leading-relaxed">
       <slot />
     </main>
-    <footer
-      class="bg-paper/80 backdrop-blur-sm border-t border-walnut/10 mt-20"
-    >
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <p class="text-xs text-muted text-center tracking-wide">
-          Coevolution Research &mdash; ANT 104
-        </p>
-      </div>
+    <footer class="bg-paper/80 backdrop-blur-sm border-t border-walnut/10 mt-8">
     </footer>
   </body>
 </html>

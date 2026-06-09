@@ -1,10 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
-import FigurePanel from "../components/FigurePanel.astro";
+import amyImage from "../assets/images/AMY2B pancreatic amylase gene.png";
+
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const withBase = (path: string) => `${basePath}${path.replace(/^\/+/, "")}`;
 ---
 
-<BaseLayout title="Genomic Diet - ANT 104">
+<BaseLayout title="Genetic Diet - ANT 104">
   <header
     class="relative overflow-hidden bg-gradient-to-br from-paper via-white to-paper py-6 md:py-8"
   >
@@ -19,54 +25,120 @@ import FigurePanel from "../components/FigurePanel.astro";
     <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
       <span
         class="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-terracotta bg-terracotta/10 rounded-full mb-2"
-        >Genomic Diet</span
+        >Genetic Diet</span
       >
       <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2 leading-tight">
-        Genomic Diet and Nutritional Adaptations
+        Genetic Diet Adaptations
       </h1>
-      <p class="text-base text-muted max-w-2xl mx-auto leading-relaxed">
-        Tracing how genes, diets, and environments influence nutritional
-        adaptation across human populations.
-      </p>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-12">
-    <div class="prose-custom space-y-6 text-ink/85 leading-relaxed">
+  <main class="mx-auto px-4 py-3">
+    <div
+      class="prose-custom space-y-6 text-ink/85 leading-relaxed max-w-3xl mx-auto"
+    >
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">To Agriculture</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium.
+        Going from hunting to an agricultural life changed how humans and dogs
+        fundamentally lived. Dogs used to help humans capture prey, but now the
+        Neolithic dogs changed from their carnivorous diet, and began consuming
+        plant-based starches. This change in diet was possible through new
+        biological changes in genes.
       </p>
-      <FigurePanel
-        label="Genomic Study 1"
-        caption="Figure 1: Genomic diet and nutritional adaptation study"
-        variant="genomic"
-      />
+
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">
+        Genetic Adaptation: Starch Digestion
+      </h2>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-        sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-        tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        Wild wolves carried two copies of the AMY2B gene which helps digesting
+        carbs. The newly domesticated dogs living in the new villages began
+        mutating to have more of those genes, as well as other carb digesting
+        genes to help them slowly function in this new era of agriculture.
       </p>
-      <FigurePanel
-        label="Genomic Study 2"
-        caption="Figure 2: Population-level nutritional adaptation comparison"
-        variant="genomic"
+
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">
+        Scholarly Evidence:
+      </h2>
+      <div class="space-y-4 text-ink/85">
+        <blockquote
+          class="border-l-4 border-terracotta pl-4 my-4 italic text-ink/70"
+        >
+          <p class="mb-2">
+            "We narrow the plausible range for the date of initial dog domestication to an interval spanning 11–16 thousand years ago, predating the rise of agriculture. In light of this finding, we expand upon previous work regarding the increase in copy number of the amylase gene (AMY2B) in dogs, which is believed to have aided digestion of starch in agricultural refuse."
+          </p>
+          <p class="text-sm">(Freedman Abstract)</p>
+        </blockquote>
+        <blockquote
+          class="border-l-4 border-terracotta pl-4 my-4 italic text-ink/70"
+        >
+          <p class="mb-2">
+            "Dog domestication as accompanied by selection at three genes with
+            key roles in starch digestion: AMY2B, MGAM and SGLT1. Our results
+            show that adaptations that allowed the early ancestors of modern
+            dogs to thrive on a diet rich in starch… constituted a crucial step
+            in early dog domestication… development of agriculture catalysed the
+            domestication of dogs"
+          </p>
+          <p class="text-sm">(Axelsson 363)</p>
+        </blockquote>
+        <blockquote
+          class="border-l-4 border-terracotta pl-4 my-4 italic text-ink/70"
+        >
+          <p class="mb-2">
+            "Selection for increased AMY2B copy number did not take place during
+            the early stage of domestication… and did not become widespread
+            until several thousand years after the first appearance of
+            starch-rich agricultural lifestyles"
+          </p>
+          <p class="text-sm">(Bergström 557–564)</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="mt-12 mb-8 flex flex-col items-center max-w-5xl mx-auto">
+      <Image
+        src={amyImage}
+        alt="AMY2B pancreatic amylase gene expansion copy number"
+        class="rounded-lg shadow-md w-full"
+        format="png"
       />
+      <figcaption
+        class="text-xs text-muted text-center mt-4 leading-relaxed max-w-3xl"
+      >
+        <em
+          >Expansion of copy number in the AMY2B pancreatic amylase gene largely
+          occurred after the transition to agriculture. Ancient dogs are plotted
+          against their age, with blue color indicating dogs from likely
+          hunter–gatherer human contexts. Bars denote 95% binomial confidence
+          intervals around the ratio of the number of reads mapping to the copy
+          number variable region to those mapping to control regions throughout
+          the genome.(Bergström 557–564).</em
+        >
+      </figcaption>
+    </div>
+
+    <div
+      class="prose-custom space-y-6 text-ink/85 leading-relaxed max-w-3xl mx-auto"
+    >
+      <h2 class="text-xl font-semibold text-ink mt-8 mb-4">
+        My Research Findings:
+      </h2>
       <p>
-        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis
-        autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-        nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur.
+        The data and figure shows definite trend relating to agriculture. The
+        change from hunting to farming did not just change human civilization
+        permanently, but it changed biological markers in our first domesticated
+        animal. This change altered canines to adapt to the crops we grew.
       </p>
     </div>
-    <ExploreTopics current="genomic-diet" />
   </main>
+  <div class="max-w-3xl mx-auto px-4">
+    <ExploreTopics current="genomic-diet" />
+    <div class="mt-12 pt-8 border-t border-walnut/10 text-center">
+      <a
+        href={withBase("/citations")}
+        class="inline-flex items-center justify-center rounded-md bg-terracotta px-5 py-3 text-sm font-semibold text-white no-underline shadow-sm transition-colors hover:bg-walnut hover:text-white"
+      >
+        View Citations
+      </a>
+    </div>
+  </div>
 </BaseLayout>
