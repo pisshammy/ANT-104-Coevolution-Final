@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ExploreTopics from "../components/ExploreTopics.astro";
+---
+
+<BaseLayout title="ANT 104 - Coevolution Research">
+  <header
+    class="relative overflow-hidden bg-gradient-to-br from-paper via-white to-paper py-6 md:py-8"
+  >
+    <div
+      class="pointer-events-none absolute top-0 left-0 w-64 h-64 bg-sage/5 rounded-full -translate-x-1/2 -translate-y-1/2"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute bottom-0 right-0 w-96 h-96 bg-terracotta/5 rounded-full translate-x-1/2 translate-y-1/2"
+    >
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+      <span
+        class="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-terracotta bg-terracotta/10 rounded-full mb-2"
+        >ANT 104 · Coevolution</span
+      >
+      <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2 leading-tight">
+        Coevolution: Genomic, Morphological, and Social Adaptations
+      </h1>
+      <p class="text-base text-muted max-w-2xl mx-auto leading-relaxed">
+        Exploring the dynamic interplay between organisms and their environments
+        across genetic, physical, and behavioral dimensions.
+      </p>
+    </div>
+  </header>
+  <section
+    class="max-w-3xl mx-auto px-4 py-3 border-y border-walnut/10 text-xs sm:text-sm text-muted"
+    aria-label="Assignment details"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
+      <p class="m-0"><strong>Name:</strong> [Your Name]</p>
+      <p class="m-0"><strong>Date:</strong> June 9, 2026</p>
+      <p class="m-0"><strong>Class:</strong> ANT 104 - Intro to Bio Anthro</p>
+      <p class="m-0"><strong>Professor:</strong> Dr. Alexandra Sumner</p>
+    </div>
+  </section>
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <div class="prose-custom space-y-6 text-ink/85 leading-relaxed">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium.
+      </p>
+      <figure class="my-10">
+        <img
+          src="https://via.placeholder.com/800x400"
+          alt="Coevolution Study"
+          class="w-full rounded-xl shadow-sm"
+        />
+        <figcaption>Figure 1: Coevolutionary process visualization</figcaption>
+      </figure>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui
+        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+        et quas molestias excepturi sint occaecati cupiditate non provident,
+        similique sunt in culpa qui officia deserunt mollitia animi, id est
+        laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+        distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+        cumque nihil impedit quo minus id quod maxime placeat facere possimus.
+      </p>
+    </div>
+    <ExploreTopics current="home" />
+  </main>
+</BaseLayout>

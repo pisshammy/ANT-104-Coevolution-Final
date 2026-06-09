@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ExploreTopics from "../components/ExploreTopics.astro";
+---
+
+<BaseLayout title="Morphology - ANT 104">
+  <header
+    class="relative overflow-hidden bg-gradient-to-br from-paper via-white to-paper py-6 md:py-8"
+  >
+    <div
+      class="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-terracotta/5 rounded-full translate-x-1/2 -translate-y-1/2"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute bottom-0 left-0 w-64 h-64 bg-sage/5 rounded-full -translate-x-1/2 translate-y-1/2"
+    >
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+      <span
+        class="inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase text-terracotta bg-terracotta/10 rounded-full mb-2"
+        >Morphology</span
+      >
+      <h1 class="text-2xl md:text-3xl font-bold text-ink mb-2 leading-tight">
+        Physical Morphology
+      </h1>
+      <p class="text-base text-muted max-w-2xl mx-auto leading-relaxed">
+        Examining how form and structure shape function, from molecular
+        architecture to whole-organism adaptation.
+      </p>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <div class="prose-custom space-y-6 text-ink/85 leading-relaxed">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <figure class="my-10">
+        <img
+          src="https://via.placeholder.com/800x400"
+          alt="Morphology Study"
+          class="w-full rounded-xl shadow-sm"
+        />
+        <figcaption>
+          Figure 2: Morphological analysis and anatomical structures
+        </figcaption>
+      </figure>
+      <p>
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+        sit amet, consectetur, adipisci velit.
+      </p>
+    </div>
+    <ExploreTopics current="morphology" />
+  </main>
+</BaseLayout>

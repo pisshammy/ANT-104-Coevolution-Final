@@ -1,0 +1,61 @@
+---
+const { current } = Astro.props;
+
+const topics = [
+  {
+    slug: "home",
+    href: "/",
+    label: "Overview",
+    title: "Coevolution Research",
+  },
+  {
+    slug: "genomic-diet",
+    href: "/genomic-diet",
+    label: "Genomic",
+    title: "Diet & Nutrition",
+  },
+  {
+    slug: "morphology",
+    href: "/morphology",
+    label: "Physical",
+    title: "Morphology",
+  },
+  {
+    slug: "pathogens-immunity",
+    href: "/pathogens-immunity",
+    label: "Pathogens",
+    title: "& Immunity",
+  },
+  {
+    slug: "social-bonds",
+    href: "/social-bonds",
+    label: "Social",
+    title: "Bonds & Cooperation",
+  },
+];
+
+const visibleTopics = topics.filter((topic) => topic.slug !== current);
+---
+
+<nav class="mt-16 pt-8 border-t border-walnut/10" aria-label="Explore topics">
+  <p class="text-sm font-medium text-muted uppercase tracking-wider mb-4">
+    Explore Topics
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {
+      visibleTopics.map((topic) => (
+        <a
+          href={topic.href}
+          class="group block p-5 bg-white rounded-xl border border-walnut/5 hover:border-terracotta/30 hover:shadow-sm transition-all duration-200"
+        >
+          <span class="text-xs font-medium tracking-wide text-terracotta uppercase">
+            {topic.label}
+          </span>
+          <span class="block mt-1 text-ink font-semibold group-hover:text-terracotta transition-colors">
+            {topic.title}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</nav>
