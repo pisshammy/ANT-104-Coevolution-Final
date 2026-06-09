@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
+import palaeolithicDogMap from "../assets/images/palaeolithic-dog-map.avif";
 ---
 
 <BaseLayout title="ANT 104 - Coevolution Research">
@@ -106,8 +108,9 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         </blockquote>
       </div>
       <figure class="mt-12">
-        <img
-          src="/src/assets/images/palaeolithic-dog-map.avif"
+        <Image
+          src={palaeolithicDogMap}
+          alt="Map showing sites where domesticated dogs are unearthed across western Eurasia"
           class="max-w-full h-auto rounded-lg shadow-sm mx-auto"
         />
         <figcaption

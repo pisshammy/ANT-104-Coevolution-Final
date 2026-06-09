@@ -1,0 +1,10 @@
+# Tool Use Protocol
+
+1.  **Code Discovery:**
+    * NEVER use `read_file` as an initial discovery step.
+    * ALWAYS use `grep` or the native file search tool to isolate specific variables, classes, or functions.
+
+2.  **Documentation (MCP Servers):**
+    * NEVER guess Astro or Tailwind syntax.
+    * NEVER scrape local `node_modules` for framework documentation.
+    * ALWAYS query the active MCP documentation servers for framework-specific implementations.
