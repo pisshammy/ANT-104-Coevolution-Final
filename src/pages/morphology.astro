@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
+import FigurePanel from "../components/FigurePanel.astro";
 ---
 
 <BaseLayout title="Morphology - ANT 104">
@@ -38,16 +39,11 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
-      <figure class="my-10">
-        <img
-          src="https://via.placeholder.com/800x400"
-          alt="Morphology Study"
-          class="w-full rounded-xl shadow-sm"
-        />
-        <figcaption>
-          Figure 2: Morphological analysis and anatomical structures
-        </figcaption>
-      </figure>
+      <FigurePanel
+        label="Morphology Study"
+        caption="Figure 2: Morphological analysis and anatomical structures"
+        variant="morphology"
+      />
       <p>
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem

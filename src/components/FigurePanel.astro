@@ -1,0 +1,80 @@
+---
+interface Props {
+  label: string;
+  caption: string;
+  variant?: "coevolution" | "genomic" | "morphology" | "pathogens" | "social";
+}
+
+const { label, caption, variant = "coevolution" } = Astro.props;
+
+const variants = {
+  coevolution: {
+    accent: "bg-terracotta",
+    tint: "bg-terracotta/10",
+    stroke: "border-terracotta/30",
+  },
+  genomic: {
+    accent: "bg-sage",
+    tint: "bg-sage/10",
+    stroke: "border-sage/30",
+  },
+  morphology: {
+    accent: "bg-gold",
+    tint: "bg-gold/10",
+    stroke: "border-gold/30",
+  },
+  pathogens: {
+    accent: "bg-walnut",
+    tint: "bg-walnut/10",
+    stroke: "border-walnut/30",
+  },
+  social: {
+    accent: "bg-terracotta",
+    tint: "bg-sage/10",
+    stroke: "border-sage/30",
+  },
+}[variant];
+---
+
+<figure class="my-10">
+  <div
+    class="relative aspect-[2/1] overflow-hidden rounded-xl border border-walnut/10 bg-white shadow-sm"
+    role="img"
+    aria-label={label}
+  >
+    <div class={`absolute inset-x-0 top-0 h-1.5 ${variants.accent}`}></div>
+    <div class="grid h-full grid-cols-3 gap-5 p-6">
+      <div class="flex flex-col justify-between">
+        <div class={`h-20 rounded-lg border ${variants.stroke} ${variants.tint}`}>
+        </div>
+        <div class="space-y-2">
+          <span class={`block h-2 w-11/12 rounded-full ${variants.accent}`}></span>
+          <span class={`block h-2 w-8/12 rounded-full ${variants.tint}`}></span>
+          <span class={`block h-2 w-10/12 rounded-full ${variants.tint}`}></span>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div
+          class={`grid h-32 w-32 grid-cols-2 gap-2 rounded-full border ${variants.stroke} p-4`}
+        >
+          <span class={`rounded-tl-full ${variants.tint}`}></span>
+          <span class={`rounded-tr-full ${variants.accent}`}></span>
+          <span class={`rounded-bl-full ${variants.accent}`}></span>
+          <span class={`rounded-br-full ${variants.tint}`}></span>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div class="grid grid-cols-4 gap-2">
+          <span class={`h-24 rounded-md ${variants.tint}`}></span>
+          <span class={`h-16 rounded-md self-end ${variants.accent}`}></span>
+          <span class={`h-28 rounded-md self-end ${variants.tint}`}></span>
+          <span class={`h-20 rounded-md self-end ${variants.accent}`}></span>
+        </div>
+        <p class="m-0 text-right text-xs font-semibold uppercase tracking-wider text-muted">
+          {label}
+        </p>
+      </div>
+    </div>
+  </div>
+  <figcaption>{caption}</figcaption>
+</figure>

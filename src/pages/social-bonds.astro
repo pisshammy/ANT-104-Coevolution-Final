@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
+import FigurePanel from "../components/FigurePanel.astro";
 ---
 
 <BaseLayout title="Social Bonds - ANT 104">
@@ -40,14 +41,11 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <figure class="my-10">
-        <img
-          src="https://via.placeholder.com/800x400"
-          alt="Social Bonds Study"
-          class="w-full rounded-xl shadow-sm"
-        />
-        <figcaption>Figure 1: Social bonds and cooperation study</figcaption>
-      </figure>
+      <FigurePanel
+        label="Social Bonds Study"
+        caption="Figure 1: Social bonds and cooperation study"
+        variant="social"
+      />
       <p>
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
+import FigurePanel from "../components/FigurePanel.astro";
 ---
 
 <BaseLayout title="ANT 104 - Coevolution Research">
@@ -52,14 +53,10 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
         error sit voluptatem accusantium doloremque laudantium.
       </p>
-      <figure class="my-10">
-        <img
-          src="https://via.placeholder.com/800x400"
-          alt="Coevolution Study"
-          class="w-full rounded-xl shadow-sm"
-        />
-        <figcaption>Figure 1: Coevolutionary process visualization</figcaption>
-      </figure>
+      <FigurePanel
+        label="Coevolution Study"
+        caption="Figure 1: Coevolutionary process visualization"
+      />
       <p>
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
         blanditiis praesentium voluptatum deleniti atque corrupti quos dolores

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ExploreTopics from "../components/ExploreTopics.astro";
+import FigurePanel from "../components/FigurePanel.astro";
 ---
 
 <BaseLayout title="Genomic Diet - ANT 104">
@@ -41,16 +42,11 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
         error sit voluptatem accusantium doloremque laudantium.
       </p>
-      <figure class="my-10">
-        <img
-          src="https://via.placeholder.com/800x400"
-          alt="Genomic Study 1"
-          class="w-full rounded-xl shadow-sm"
-        />
-        <figcaption>
-          Figure 1: Genomic diet and nutritional adaptation study
-        </figcaption>
-      </figure>
+      <FigurePanel
+        label="Genomic Study 1"
+        caption="Figure 1: Genomic diet and nutritional adaptation study"
+        variant="genomic"
+      />
       <p>
         Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
@@ -58,16 +54,11 @@ import ExploreTopics from "../components/ExploreTopics.astro";
         sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
         tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
       </p>
-      <figure class="my-10">
-        <img
-          src="https://via.placeholder.com/800x400"
-          alt="Genomic Study 2"
-          class="w-full rounded-xl shadow-sm"
-        />
-        <figcaption>
-          Figure 2: Population-level nutritional adaptation comparison
-        </figcaption>
-      </figure>
+      <FigurePanel
+        label="Genomic Study 2"
+        caption="Figure 2: Population-level nutritional adaptation comparison"
+        variant="genomic"
+      />
       <p>
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
         suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis
